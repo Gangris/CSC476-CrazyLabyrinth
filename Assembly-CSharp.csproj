@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\LevelCreator.cs" />
     <Compile Include="Assets\Scripts\Levels\Level1.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/adari/Documents/School/CSC 476/Crazy Labyrinth/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

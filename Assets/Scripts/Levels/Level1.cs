@@ -9,9 +9,9 @@ public class Level1 : Level
 
     private int[,] layout =
     {
-        {6, 12, 7},
-        {4, 0, 3},
-        {5, 1, 8}
+        {7, 3, 8},
+        {2, 0, 1},
+        {6, 4, 5}
     };
 
     private int endX = 2;

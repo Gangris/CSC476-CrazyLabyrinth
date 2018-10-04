@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class LevelCreator : MonoBehaviour
 {
-    public static GameObject PlayerBall;
-    public static GameObject LosePrefab;
-    public static GameObject WinPrefab;
+    public GameObject PlayerBall;
+    public GameObject LosePrefab;
+    public GameObject WinPrefab;
     public GameObject Floor0;
     public GameObject Floor1;
     public GameObject Floor2;
@@ -24,11 +24,15 @@ public class LevelCreator : MonoBehaviour
     public GameObject Floor13;
     private static Dictionary<int, GameObject> _floorMap = new Dictionary<int, GameObject>();
     private static Dictionary<int, Level> _levels = new Dictionary<int, Level>();
-    //private static int _currentLevel;
+    private static Dictionary<string, GameObject> _keyItems = new Dictionary<string, GameObject>();
+    private static int _currentLevel;
 
     void Start()
     {
-        // Add all the levels by reference for quick reference
+        // Add key items to easily access them later
+        _keyItems.Add("PlayerBall", PlayerBall);
+
+        // Add all the levels by reference for quick reference. We keep levels lightweight on purpose.
         _levels.Add(1, new Level1());
 
         // Add all the floor prefabs to dictionary for quick reference
@@ -53,7 +57,7 @@ public class LevelCreator : MonoBehaviour
     {
         Level curLevel = _levels[levelNumber];
         int[,] levelLayout = curLevel.GetLayout();
-        //_currentLevel = levelNumber;
+        _currentLevel = levelNumber;
 
         // Clear Current Level
         GameObject[] rmFloor = GameObject.FindGameObjectsWithTag("Floor");
@@ -88,7 +92,7 @@ public class LevelCreator : MonoBehaviour
             {
                 // Create Floor
                 GameObject currentPrefab = _floorMap[levelLayout[i, j]]; // Use the key in the levelLayout and get the correct Prefab
-                Vector3 pos = new Vector3(i, 0f, j);
+                Vector3 pos = new Vector3(j, 0f, -i);
                 Instantiate(currentPrefab, pos, Quaternion.identity);
 
                 //// Create Triggers below Floor
@@ -104,9 +108,9 @@ public class LevelCreator : MonoBehaviour
         }
 
         // Create Ball
-        var startXPos = curLevel.GetStartX() + .5f;
-        var startYPos = curLevel.GetStartY() + .5f;
-        //Instantiate(PlayerBall, new Vector3(startXPos, 1, startYPos), Quaternion.identity);
+        var startXPos = curLevel.GetStartX();
+        var startYPos = -(curLevel.GetStartY());
+        Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 1, startYPos), Quaternion.identity);
 
         // Set Camera
         // TODO: Zoom out enough to show entire gameboard.
