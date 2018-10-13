@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class LevelCreator : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class LevelCreator : MonoBehaviour
     private static Dictionary<int, Level> _levels = new Dictionary<int, Level>();
     private static Dictionary<string, GameObject> _keyItems = new Dictionary<string, GameObject>();
     private static int _currentLevel;
+    private static Vector3 camPos = new Vector3(0,5,0);
 
     void Start()
     {
@@ -53,6 +55,11 @@ public class LevelCreator : MonoBehaviour
         _floorMap.Add(12, Floor12);
         _floorMap.Add(13, Floor13);
         // Need to add floormaps with holes in them
+    }
+
+    void FixedUpdate()
+    {
+        transform.position = camPos;
     }
 
     public static bool LoadLevel(int levelNumber)
@@ -114,8 +121,10 @@ public class LevelCreator : MonoBehaviour
         var startYPos = -(curLevel.GetStartY());
         Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 1, startYPos), Quaternion.identity);
 
-        // Set Camera
-        // TODO: Zoom out enough to show entire gameboard.
+        // Move Camera to center on board
+        var camX = (float)(levelLayout.GetLength(0) - 1) / 2f;
+        var camY = -(float)(levelLayout.GetLength(1) - 1) / 2f;
+        camPos = new Vector3(camX,5,camY);
 
         return true; // Indicate when and if it was successful.
     }

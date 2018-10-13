@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Win
   - Lose
+  - Camera
   layers:
   - Default
   - TransparentFX
