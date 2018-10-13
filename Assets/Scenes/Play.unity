@@ -461,7 +461,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -493,8 +493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerBall: {fileID: 1549160124316618, guid: e54cd04e3583a9a4b99e6394a76e6aad, type: 2}
-  LosePrefab: {fileID: 0}
-  WinPrefab: {fileID: 0}
+  LosePrefab: {fileID: 1483295874744592, guid: b4be4d97540ce4143b45acdd794a194a, type: 2}
+  WinPrefab: {fileID: 1641567269678574, guid: 742e1f79e23e83644a8a47764a3beada, type: 2}
   Floor0: {fileID: 1887166974891728, guid: d759982922a0ea1418d17717a78fc4b5, type: 2}
   Floor1: {fileID: 1074884843478018, guid: 956a4fcc415199f46b0bfd27484a7798, type: 2}
   Floor2: {fileID: 1584808492769142, guid: 2896b944fc8e71e44a23c060033e59ca, type: 2}

@@ -21,4 +21,17 @@ public class PlayerController : MonoBehaviour {
 
 	    rb.AddForce(movement * speed);
     }
+
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.gameObject.CompareTag("Win"))
+        {
+
+        }
+
+        if (c.gameObject.CompareTag("Lose"))
+        {
+
+        }
+    }
 }
