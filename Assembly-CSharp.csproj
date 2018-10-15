@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Levels\Level1.cs" />
     <Compile Include="Assets\Scripts\Levels\Level2.cs" />
     <Compile Include="Assets\Scripts\Levels\Level3.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level4.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level5.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayManager.cs" />

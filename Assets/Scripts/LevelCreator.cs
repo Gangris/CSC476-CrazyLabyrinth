@@ -137,13 +137,13 @@ public class LevelCreator : MonoBehaviour
                 Instantiate(currentPrefab, pos, Quaternion.identity);
 
                 //// Create Triggers below Floor
-                if (i == curLevel.GetEndX() && j == curLevel.GetEndY())
+                if (j == curLevel.GetEndX() && i == curLevel.GetEndY())
                 {
-                    Instantiate(_keyItems["Win"], new Vector3(i, 2f, -j), Quaternion.identity);
+                    Instantiate(_keyItems["Win"], new Vector3(j, 2f, -i), Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(_keyItems["Lose"], new Vector3(i, 2f, -j), Quaternion.identity);
+                    Instantiate(_keyItems["Lose"], new Vector3(j, 2f, -i), Quaternion.identity);
                 }
             }
         }

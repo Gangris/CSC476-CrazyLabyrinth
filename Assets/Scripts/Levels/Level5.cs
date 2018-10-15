@@ -18,8 +18,8 @@ public class Level5 : Level
         {-7,5, 5, -5,-6}
     };
 
-    private int endX = 5; // +1
-    private int endY = 3; // +1
+    private int endX = 4; // +1
+    private int endY = 6; // +1
 
     public int GetStartX()
     {
