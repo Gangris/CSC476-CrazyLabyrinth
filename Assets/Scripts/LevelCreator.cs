@@ -81,6 +81,8 @@ public class LevelCreator : MonoBehaviour
         _floorMap.Add(-11, FloorHole10);
         _floorMap.Add(-12, FloorHole11);
         _floorMap.Add(-13, FloorHole12);
+
+        LevelCreator.LoadLevel(1);
     }
 
     void FixedUpdate()
