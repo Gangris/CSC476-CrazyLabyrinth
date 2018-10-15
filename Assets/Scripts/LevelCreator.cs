@@ -154,4 +154,25 @@ public class LevelCreator : MonoBehaviour
 
         return true; // Indicate when and if it was successful.
     }
+
+    public static void LoadNextLevel()
+    {
+        LoadLevel(++_currentLevel);
+    }
+
+    public static void RestartCurrentLevel()
+    {
+        Level curLevel = _levels[_currentLevel];
+        GameObject[] rmBall = GameObject.FindGameObjectsWithTag("GameBall");
+
+        foreach (var y in rmBall) // Kill Ball
+        {
+            Destroy(y);
+        }
+
+        // Create Ball
+        var startXPos = curLevel.GetStartX();
+        var startYPos = -(curLevel.GetStartY());
+        Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 3.5f, startYPos), Quaternion.identity);
+    }
 }

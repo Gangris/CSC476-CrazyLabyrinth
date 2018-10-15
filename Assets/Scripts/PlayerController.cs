@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour {
     {
         if (c.gameObject.CompareTag("Win"))
         {
-
+            LevelCreator.LoadNextLevel();
         }
 
         if (c.gameObject.CompareTag("Lose"))
         {
-
+            LevelCreator.RestartCurrentLevel();
         }
     }
 }
