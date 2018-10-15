@@ -51,6 +51,7 @@ public class LevelCreator : MonoBehaviour
 
         // Add all the levels by reference for quick reference. We keep levels lightweight on purpose.
         _levels.Add(1, new Level1());
+        _levels.Add(2, new Level2());
 
         // Add all the floor prefabs to dictionary for quick reference
         _floorMap.Add(1, Floor0);
@@ -132,11 +133,11 @@ public class LevelCreator : MonoBehaviour
                 //// Create Triggers below Floor
                 if (i == curLevel.GetEndX() && j == curLevel.GetEndY())
                 {
-                    Instantiate(_keyItems["Win"], new Vector3(j, 1f, -i), Quaternion.identity);
+                    Instantiate(_keyItems["Win"], new Vector3(i, 1f, -j), Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(_keyItems["Lose"], new Vector3(j, 1f, -i), Quaternion.identity);
+                    Instantiate(_keyItems["Lose"], new Vector3(i, 1f, -j), Quaternion.identity);
                 }
             }
         }

@@ -7,6 +7,8 @@ public class PlayManager : MonoBehaviour
 {
     public Button DebugButtonPlay1;
     public Text DebugText;
+
+    private int internalCount;
 	// Use this for initialization
 	void Start ()
 	{
@@ -21,7 +23,7 @@ public class PlayManager : MonoBehaviour
 
     void TaskDebugButtonPlay1Clicked()
     {
-        DebugText.text = "Loaded Level 1";
-        LevelCreator.LoadLevel(1);
+        LevelCreator.LoadLevel(++internalCount);
+        DebugText.text = "Loaded Level " + internalCount;
     }
 }

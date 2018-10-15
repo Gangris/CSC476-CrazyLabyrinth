@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Level1 : Level
 {
-    private int startX = 0;
-    private int startY = 0;
+    private int startX = 0; // +1
+    private int startY = 0; // +1
 
     private int[,] layout =
     {
@@ -14,8 +14,8 @@ public class Level1 : Level
         {7, 5, -6}
     };
 
-    private int endX = 2;
-    private int endY = 2;
+    private int endX = 2; // +1
+    private int endY = 2; // +1
 
     public int GetStartX()
     {
