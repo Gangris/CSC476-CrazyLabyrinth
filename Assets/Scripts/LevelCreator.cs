@@ -175,4 +175,9 @@ public class LevelCreator : MonoBehaviour
         var startYPos = -(curLevel.GetStartY());
         Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 3.5f, startYPos), Quaternion.identity);
     }
+
+    public static int CurrentLevel
+    {
+        get { return _currentLevel; }
+    }
 }

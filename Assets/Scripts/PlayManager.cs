@@ -18,12 +18,11 @@ public class PlayManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+	    DebugText.text = "Loaded Level " + LevelCreator.CurrentLevel;
+    }
 
     void TaskDebugButtonPlay1Clicked()
     {
         LevelCreator.LoadLevel(++internalCount);
-        DebugText.text = "Loaded Level " + internalCount;
     }
 }
