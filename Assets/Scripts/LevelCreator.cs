@@ -126,17 +126,17 @@ public class LevelCreator : MonoBehaviour
             {
                 // Create Floor
                 GameObject currentPrefab = _floorMap[levelLayout[i, j]]; // Use the key in the levelLayout and get the correct Prefab
-                Vector3 pos = new Vector3(j, 0f, -i);
+                Vector3 pos = new Vector3(j, 3f, -i);
                 Instantiate(currentPrefab, pos, Quaternion.identity);
 
                 //// Create Triggers below Floor
                 if (i == curLevel.GetEndX() && j == curLevel.GetEndY())
                 {
-                    Instantiate(_keyItems["Win"], new Vector3(i, -2f, j), Quaternion.identity);
+                    Instantiate(_keyItems["Win"], new Vector3(i, 1f, j), Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(_keyItems["Lose"], new Vector3(i, -2f, j), Quaternion.identity);
+                    Instantiate(_keyItems["Lose"], new Vector3(i, 1f, j), Quaternion.identity);
                 }
             }
         }
@@ -144,7 +144,7 @@ public class LevelCreator : MonoBehaviour
         // Create Ball
         var startXPos = curLevel.GetStartX();
         var startYPos = -(curLevel.GetStartY());
-        Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 1, startYPos), Quaternion.identity);
+        Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 3.5f, startYPos), Quaternion.identity);
 
         // Move Camera to center on board
         var camX = (float)(levelLayout.GetLength(0) - 1) / 2f;
