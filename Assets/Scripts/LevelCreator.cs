@@ -53,6 +53,7 @@ public class LevelCreator : MonoBehaviour
         _levels.Add(1, new Level1());
         _levels.Add(2, new Level2());
         _levels.Add(3, new Level3());
+        _levels.Add(4, new Level4());
 
         // Add all the floor prefabs to dictionary for quick reference
         _floorMap.Add(1, Floor0);
@@ -136,11 +137,11 @@ public class LevelCreator : MonoBehaviour
                 //// Create Triggers below Floor
                 if (i == curLevel.GetEndX() && j == curLevel.GetEndY())
                 {
-                    Instantiate(_keyItems["Win"], new Vector3(i, 1f, -j), Quaternion.identity);
+                    Instantiate(_keyItems["Win"], new Vector3(i, 2f, -j), Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(_keyItems["Lose"], new Vector3(i, 1f, -j), Quaternion.identity);
+                    Instantiate(_keyItems["Lose"], new Vector3(i, 2f, -j), Quaternion.identity);
                 }
             }
         }
