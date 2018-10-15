@@ -54,6 +54,7 @@ public class LevelCreator : MonoBehaviour
         _levels.Add(2, new Level2());
         _levels.Add(3, new Level3());
         _levels.Add(4, new Level4());
+        _levels.Add(5, new Level5());
 
         // Add all the floor prefabs to dictionary for quick reference
         _floorMap.Add(1, Floor0);
@@ -129,6 +130,7 @@ public class LevelCreator : MonoBehaviour
         {
             for (var j = 0; j < levelLayout.GetLength(1); j++) // Height
             {
+                
                 // Create Floor
                 GameObject currentPrefab = _floorMap[levelLayout[i, j]]; // Use the key in the levelLayout and get the correct Prefab
                 Vector3 pos = new Vector3(j, 3f, -i);
