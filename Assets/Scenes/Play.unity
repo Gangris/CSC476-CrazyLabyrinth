@@ -509,6 +509,22 @@ MonoBehaviour:
   Floor11: {fileID: 1066537051671196, guid: 9cbe833f2f5d1b147b282258affe6b1b, type: 2}
   Floor12: {fileID: 1848606391374500, guid: 930d4d4ff6d28d742938300de6448ca8, type: 2}
   Floor13: {fileID: 1483479986841840, guid: af5580dc0e681ab479108c5d6677f291, type: 2}
+  FloorHole0: {fileID: 1946517031496942, guid: 6c866cb6d3cf94e4196ba81f981b0166, type: 2}
+  FloorHole1: {fileID: 1610709944101932, guid: 398b426d755108f47841d2eff994fb15, type: 2}
+  FloorHole2: {fileID: 1648924922359798, guid: 0846d2543ddc94649924f5552cf8bfc5, type: 2}
+  FloorHole3: {fileID: 1962993379166524, guid: 68f3e34702f00694492e19aee61547d1, type: 2}
+  FloorHole4: {fileID: 1002685586784658, guid: 3810cc8b5eb03cd40a9703d9d25ef581, type: 2}
+  FloorHole5: {fileID: 1405444184018438, guid: af4f074bed267db4db46da1c566c088d, type: 2}
+  FloorHole6: {fileID: 1399216438230278, guid: 15d6fd4797687aa4292d650fb537449f, type: 2}
+  FloorHole7: {fileID: 1018615077292030, guid: 3b8184de593183a4f99def54cb32df48, type: 2}
+  FloorHole8: {fileID: 1240059875390186, guid: 572b165c3f998e04eb139378272eb996, type: 2}
+  FloorHole9: {fileID: 1651154242587116, guid: a8af61a1f0fac5349a2bb41042c3a372, type: 2}
+  FloorHole10: {fileID: 1481514923570652, guid: 499e172cf2c95a849b9758411d7f396d,
+    type: 2}
+  FloorHole11: {fileID: 1756350325063764, guid: 07ff317b330d9f0499f2c741badddaeb,
+    type: 2}
+  FloorHole12: {fileID: 1121231667620932, guid: 4ac36a82860625c43a451a7c19e34142,
+    type: 2}
 --- !u!1 &813620976
 GameObject:
   m_ObjectHideFlags: 0

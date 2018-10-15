@@ -23,6 +23,19 @@ public class LevelCreator : MonoBehaviour
     public GameObject Floor11;
     public GameObject Floor12;
     public GameObject Floor13;
+    public GameObject FloorHole0;
+    public GameObject FloorHole1;
+    public GameObject FloorHole2;
+    public GameObject FloorHole3;
+    public GameObject FloorHole4;
+    public GameObject FloorHole5;
+    public GameObject FloorHole6;
+    public GameObject FloorHole7;
+    public GameObject FloorHole8;
+    public GameObject FloorHole9;
+    public GameObject FloorHole10;
+    public GameObject FloorHole11;
+    public GameObject FloorHole12;
     private static Dictionary<int, GameObject> _floorMap = new Dictionary<int, GameObject>();
     private static Dictionary<int, Level> _levels = new Dictionary<int, Level>();
     private static Dictionary<string, GameObject> _keyItems = new Dictionary<string, GameObject>();
@@ -54,7 +67,18 @@ public class LevelCreator : MonoBehaviour
         _floorMap.Add(11, Floor11);
         _floorMap.Add(12, Floor12);
         _floorMap.Add(13, Floor13);
-        // Need to add floormaps with holes in them
+        _floorMap.Add(-1, FloorHole0);
+        _floorMap.Add(-2, FloorHole1);
+        _floorMap.Add(-3, FloorHole3);
+        _floorMap.Add(-4, FloorHole4);
+        _floorMap.Add(-5, FloorHole5);
+        _floorMap.Add(-6, FloorHole6);
+        _floorMap.Add(-7, FloorHole7);
+        _floorMap.Add(-8, FloorHole8);
+        _floorMap.Add(-9, FloorHole9);
+        _floorMap.Add(-10, FloorHole10);
+        _floorMap.Add(-11, FloorHole11);
+        _floorMap.Add(-12, FloorHole12);
     }
 
     void FixedUpdate()
