@@ -53,32 +53,33 @@ public class LevelCreator : MonoBehaviour
         _levels.Add(1, new Level1());
 
         // Add all the floor prefabs to dictionary for quick reference
-        _floorMap.Add(0, Floor0);
-        _floorMap.Add(1, Floor1);
-        _floorMap.Add(2, Floor2);
-        _floorMap.Add(3, Floor3);
-        _floorMap.Add(4, Floor4);
-        _floorMap.Add(5, Floor5);
-        _floorMap.Add(6, Floor6);
-        _floorMap.Add(7, Floor7);
-        _floorMap.Add(8, Floor8);
-        _floorMap.Add(9, Floor9);
-        _floorMap.Add(10, Floor10);
-        _floorMap.Add(11, Floor11);
-        _floorMap.Add(12, Floor12);
-        _floorMap.Add(13, Floor13);
+        _floorMap.Add(1, Floor0);
+        _floorMap.Add(2, Floor1);
+        _floorMap.Add(3, Floor2);
+        _floorMap.Add(4, Floor3);
+        _floorMap.Add(5, Floor4);
+        _floorMap.Add(6, Floor5);
+        _floorMap.Add(7, Floor6);
+        _floorMap.Add(8, Floor7);
+        _floorMap.Add(9, Floor8);
+        _floorMap.Add(10, Floor9);
+        _floorMap.Add(11, Floor10);
+        _floorMap.Add(12, Floor11);
+        _floorMap.Add(13, Floor12);
+        _floorMap.Add(14, Floor13);
         _floorMap.Add(-1, FloorHole0);
         _floorMap.Add(-2, FloorHole1);
-        _floorMap.Add(-3, FloorHole3);
-        _floorMap.Add(-4, FloorHole4);
-        _floorMap.Add(-5, FloorHole5);
-        _floorMap.Add(-6, FloorHole6);
-        _floorMap.Add(-7, FloorHole7);
-        _floorMap.Add(-8, FloorHole8);
-        _floorMap.Add(-9, FloorHole9);
-        _floorMap.Add(-10, FloorHole10);
-        _floorMap.Add(-11, FloorHole11);
-        _floorMap.Add(-12, FloorHole12);
+        _floorMap.Add(-3, FloorHole2);
+        _floorMap.Add(-4, FloorHole3);
+        _floorMap.Add(-5, FloorHole4);
+        _floorMap.Add(-6, FloorHole5);
+        _floorMap.Add(-7, FloorHole6);
+        _floorMap.Add(-8, FloorHole7);
+        _floorMap.Add(-9, FloorHole8);
+        _floorMap.Add(-10, FloorHole9);
+        _floorMap.Add(-11, FloorHole10);
+        _floorMap.Add(-12, FloorHole11);
+        _floorMap.Add(-13, FloorHole12);
     }
 
     void FixedUpdate()
