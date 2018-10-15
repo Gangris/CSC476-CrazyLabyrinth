@@ -52,6 +52,7 @@ public class LevelCreator : MonoBehaviour
         // Add all the levels by reference for quick reference. We keep levels lightweight on purpose.
         _levels.Add(1, new Level1());
         _levels.Add(2, new Level2());
+        _levels.Add(3, new Level3());
 
         // Add all the floor prefabs to dictionary for quick reference
         _floorMap.Add(1, Floor0);
