@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
+using UnityEngine.SceneManagement;
+
 
 public class LevelCreator : MonoBehaviour
 {
+    
     public GameObject PlayerBall;
     public GameObject LosePrefab;
     public GameObject WinPrefab;
@@ -36,6 +39,7 @@ public class LevelCreator : MonoBehaviour
     public GameObject FloorHole10;
     public GameObject FloorHole11;
     public GameObject FloorHole12;
+    public static int lives = 3;
     private static Dictionary<int, GameObject> _floorMap = new Dictionary<int, GameObject>();
     private static Dictionary<int, Level> _levels = new Dictionary<int, Level>();
     private static Dictionary<string, GameObject> _keyItems = new Dictionary<string, GameObject>();
@@ -44,6 +48,7 @@ public class LevelCreator : MonoBehaviour
 
     void Start()
     {
+        
         // Add key items to easily access them later
         _keyItems.Add("PlayerBall", PlayerBall);
         _keyItems.Add("Lose", LosePrefab);
@@ -166,6 +171,17 @@ public class LevelCreator : MonoBehaviour
         LoadLevel(++_currentLevel);
     }
 
+    public static void CurrentLives()
+    { 
+       lives -= 1;
+
+       if (lives <= 0)
+       {
+            SceneManager.LoadScene("GameOver");
+            lives += 3;
+       }
+    }
+
     public static void RestartCurrentLevel()
     {
         Level curLevel = _levels[_currentLevel];
@@ -180,10 +196,16 @@ public class LevelCreator : MonoBehaviour
         var startXPos = curLevel.GetStartX();
         var startYPos = -(curLevel.GetStartY());
         Instantiate(_keyItems["PlayerBall"], new Vector3(startXPos, 3.5f, startYPos), Quaternion.identity);
+
     }
 
     public static int CurrentLevel
     {
         get { return _currentLevel; }
+    }
+
+    public static int CurLives
+    {
+        get { return lives; }
     }
 }
