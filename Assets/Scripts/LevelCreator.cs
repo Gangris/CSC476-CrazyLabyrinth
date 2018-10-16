@@ -60,6 +60,7 @@ public class LevelCreator : MonoBehaviour
         _levels.Add(3, new Level3());
         _levels.Add(4, new Level4());
         _levels.Add(5, new Level5());
+        _levels.Add(6, new Level6());
 
         // Add all the floor prefabs to dictionary for quick reference
         _floorMap.Add(1, Floor0);
